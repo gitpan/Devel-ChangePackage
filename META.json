@@ -41,11 +41,11 @@
       "homepage" : "http://search.cpan.org/dist/Devel-ChangePackage",
       "repository" : {
          "type" : "git",
-         "url" : "git://github.com/rafl/Devel-ChangePackage.git",
-         "web" : "http://github.com/rafl/Devel-ChangePackage"
+         "url" : "git://github.com/rafl/devel-changepackage.git",
+         "web" : "http://github.com/rafl/devel-changepackage"
       }
    },
-   "version" : "0.02",
+   "version" : "0.03",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
