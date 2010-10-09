@@ -1,5 +1,5 @@
 {
-   "abstract" : "Change the package core is currently being compiled in",
+   "abstract" : "Change the package code is currently being compiled in",
    "author" : [
       "Florian Ragwitz <rafl@debian.org>"
    ],
@@ -45,7 +45,7 @@
          "web" : "http://github.com/rafl/Devel-ChangePackage"
       }
    },
-   "version" : "0.01",
+   "version" : "0.02",
    "x_Dist_Zilla" : {
       "plugins" : [
          {

@@ -9,7 +9,7 @@ use ExtUtils::MakeMaker 6.31;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Change the package core is currently being compiled in',
+  'ABSTRACT' => 'Change the package code is currently being compiled in',
   'AUTHOR' => 'Florian Ragwitz <rafl@debian.org>',
   'BUILD_REQUIRES' => {
     'FindBin' => '0',
@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'Sub::Exporter' => '0',
     'XSLoader' => '0'
   },
-  'VERSION' => '0.01',
+  'VERSION' => '0.02',
   'test' => {
     'TESTS' => 't/*.t'
   }

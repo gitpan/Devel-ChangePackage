@@ -6,9 +6,9 @@ BEGIN {
   $Devel::ChangePackage::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $Devel::ChangePackage::VERSION = '0.01';
+  $Devel::ChangePackage::VERSION = '0.02';
 }
-# ABSTRACT: Change the package core is currently being compiled in
+# ABSTRACT: Change the package code is currently being compiled in
 
 use XSLoader;
 use Sub::Exporter -setup => {
@@ -36,7 +36,7 @@ __END__
 
 =head1 NAME
 
-Devel::ChangePackage - Change the package core is currently being compiled in
+Devel::ChangePackage - Change the package code is currently being compiled in
 
 =head1 SYNOPSIS
 
