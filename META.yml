@@ -21,7 +21,7 @@ resources:
   bugtracker: http://rt.cpan.org/Public/Dist/Display.html?Name=Devel-ChangePackage
   homepage: http://search.cpan.org/dist/Devel-ChangePackage
   repository: git://github.com/rafl/devel-changepackage.git
-version: 0.04
+version: 0.05
 x_Dist_Zilla:
   plugins:
     -

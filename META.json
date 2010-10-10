@@ -45,7 +45,7 @@
          "web" : "http://github.com/rafl/devel-changepackage"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
    "x_Dist_Zilla" : {
       "plugins" : [
          {
