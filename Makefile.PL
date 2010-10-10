@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'Sub::Exporter' => '0',
     'XSLoader' => '0'
   },
-  'VERSION' => '0.05',
+  'VERSION' => '0.06',
   'test' => {
     'TESTS' => 't/*.t'
   }

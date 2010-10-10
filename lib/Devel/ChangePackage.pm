@@ -6,7 +6,7 @@ BEGIN {
   $Devel::ChangePackage::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $Devel::ChangePackage::VERSION = '0.05';
+  $Devel::ChangePackage::VERSION = '0.06';
 }
 # ABSTRACT: Change the package code is currently being compiled in
 
@@ -73,7 +73,7 @@ that package is.  For example:
     sub routine { } # this gets defined in package Foo
 
     {
-        BEGIN { change_package('Affe') }
+        BEGIN { change_package('Bar') }
     }
 
     sub other { } # this gets defined in package Bar!
