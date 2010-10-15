@@ -6,7 +6,7 @@ BEGIN {
   $Devel::ChangePackage::AUTHORITY = 'cpan:FLORA';
 }
 BEGIN {
-  $Devel::ChangePackage::VERSION = '0.06';
+  $Devel::ChangePackage::VERSION = '0.07';
 }
 # ABSTRACT: Change the package code is currently being compiled in
 

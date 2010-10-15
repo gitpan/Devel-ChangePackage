@@ -13,7 +13,7 @@ my %WriteMakefileArgs = (
   'AUTHOR' => 'Florian Ragwitz <rafl@debian.org>',
   'BUILD_REQUIRES' => {
     'FindBin' => '0',
-    'Test::More' => '0'
+    'Test::More' => '0.89'
   },
   'CONFIGURE_REQUIRES' => {
     'ExtUtils::MakeMaker' => '6.31'
@@ -26,7 +26,7 @@ my %WriteMakefileArgs = (
     'Sub::Exporter' => '0',
     'XSLoader' => '0'
   },
-  'VERSION' => '0.06',
+  'VERSION' => '0.07',
   'test' => {
     'TESTS' => 't/*.t'
   }
