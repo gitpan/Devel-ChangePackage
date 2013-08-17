@@ -4,34 +4,51 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Change the package code is currently being compiled in',
-  'AUTHOR' => 'Florian Ragwitz <rafl@debian.org>',
-  'BUILD_REQUIRES' => {
-    'FindBin' => '0',
-    'Test::More' => '0.89'
+  "ABSTRACT" => "Change the package code is currently being compiled in",
+  "AUTHOR" => "Florian Ragwitz <rafl\@debian.org>",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "DISTNAME" => "Devel-ChangePackage",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Devel::ChangePackage",
+  "PREREQ_PM" => {
+    "Sub::Exporter" => 0,
+    "XSLoader" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'DISTNAME' => 'Devel-ChangePackage',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Devel::ChangePackage',
-  'PREREQ_PM' => {
-    'Sub::Exporter' => '0',
-    'XSLoader' => '0'
+  "TEST_REQUIRES" => {
+    "FindBin" => 0,
+    "Test::More" => "0.89",
+    "lib" => 0
   },
-  'VERSION' => '0.07',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "0.08",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.63_03) } ) {
+  my $tr = delete $WriteMakefileArgs{TEST_REQUIRES};
+  my $br = $WriteMakefileArgs{BUILD_REQUIRES};
+  for my $mod ( keys %$tr ) {
+    if ( exists $br->{$mod} ) {
+      $br->{$mod} = $tr->{$mod} if $tr->{$mod} > $br->{$mod};
+    }
+    else {
+      $br->{$mod} = $tr->{$mod};
+    }
+  }
+}
 
 unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
   my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
